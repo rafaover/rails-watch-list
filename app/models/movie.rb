@@ -4,6 +4,6 @@ class Movie < ApplicationRecord
   validates :title, :overview, presence: true, uniqueness: true
 
   def check_for_bookmark
-    throw :abort if bookmarks.count.positive?
+    throw(:abort) if bookmarks.count.positive?
   end
 end
