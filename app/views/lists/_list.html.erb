@@ -1,10 +1,12 @@
-<div id="<%= dom_id list %>" class="card mb-3">
-  <div class="card-body">
-    <p>
-      <strong><%= list.name.upcase %></strong>
-    </p>
-    <p>
-      <%# <%= "a background image" %>
-    </p>
+<%= link_to list_path(list) do %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <p>
+        <strong><%= list.name.upcase %></strong>
+      </p>
+      <p>
+        <%# <%= "a background image" %>
+      </p>
+    </div>
   </div>
-</div>
+<% end %>
