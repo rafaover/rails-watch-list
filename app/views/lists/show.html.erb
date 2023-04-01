@@ -12,8 +12,14 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-body">
+            <div class="movie-image mb-3" style="width:100%; height:200px; overflow:hidden;">
+              <img src="<%= movie.poster_url %>" style="width:100%;"/>
+            </div>
             <h5 class="card-title"><%= movie.title %></h5>
-            <p class="card-text"><%= movie.overview %></p>
+            <p class="card-text small"><%= movie.overview %></p>
+            <% movie.bookmarks.each do |bookmark| %>
+              <p class="card-text">" <em><%= bookmark.comment %> "</em></p>
+            <% end %>
           </div>
         </div>
       </div>
