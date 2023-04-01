@@ -1,2 +1,23 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
+<div class="container">
+  <h1>New Bookmark</h1>
+  <div class="row justify-content-center">
+    <div class="card-body">
+
+    <%= simple_form_for([@list, @bookmark]) do |f| %>
+      <div class="form-inputs">
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn btn-outline-primary" %>
+      </div>
+    <% end %>
+
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <%= link_to "Return to #{@list.name} List", list_path(@list), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
