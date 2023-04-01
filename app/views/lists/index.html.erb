@@ -1,3 +1,5 @@
+<p style="color: green"><%= notice %></p>
+
 <div class="container">
   <div class="row justify-content-center mb-4">
     <h1 class="text-center">Movies Watch List</h1>
@@ -7,11 +9,11 @@
   </div>
 
   <div class="row justify-content-center">
-    <% @lists.in_groups_of(3, false).each do |allLists| %>
+    <% @lists.in_groups_of(3, false).each do |list| %>
       <div class="row mb-4">
-        <% allLists.compact.each do |listCard| %>
+        <% list.each do |list| %>
           <div class="col-md-4">
-            <%= render listCard %>
+            <%= render list %>
           </div>
         <% end %>
       </div>
