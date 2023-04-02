@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>New Bookmark</h1>
+  <h1 class="py-3 text-center">New Bookmark</h1>
   <div class="row justify-content-center">
     <div class="card-body">
 
-    <%= simple_form_for([@list, @bookmark]) do |f| %>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
       <div class="form-inputs">
         <%= f.association :movie %>
         <%= f.input :comment %>

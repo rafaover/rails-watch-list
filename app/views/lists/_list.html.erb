@@ -1,12 +1,7 @@
 <%= link_to list_path(list) do %>
-  <div class="card mb-3">
-    <div class="card-body">
-      <p>
-        <strong><%= list.name.upcase %></strong>
-      </p>
-      <p>
-        <%# <%= "a background image" %>
-      </p>
+  <div class="card-body text-center">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= list.name.upcase %>
     </div>
   </div>
 <% end %>
