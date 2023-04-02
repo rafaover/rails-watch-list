@@ -1,9 +1,12 @@
 <div class="container">
 
-  <div class="row justify-content-center mb-4">
-    <h1 class="text-center"><%= @list.name %></h1>
-    <div class="col-12 text-center">
-    <%= link_to "Add a Bookmark", new_list_bookmark_path(@list), class: "btn btn-success" %>
+  <div class="row justify-content-center mb-4">`
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= @list.name %>
+    </div>
+    <div class="col-12 text-center py-3">
+    <%= link_to "Add a Movie Bookmark", new_list_bookmark_path(@list), class: "btn btn-outline-success" %>
     </div>
   </div>
 
@@ -15,10 +18,11 @@
             <div class="movie-image mb-3" style="width:100%; height:200px; overflow:hidden;">
               <img src="<%= movie.poster_url %>" style="width:100%;"/>
             </div>
-            <h5 class="card-title"><%= movie.title %></h5>
+            <h5 class="card-title mx-auto"><%= movie.title %> / <%= movie.rating %><i class="fa-solid fa-star mx-1" style="color: #fff700;"></i></h5>
             <p class="card-text small"><%= movie.overview %></p>
             <% movie.bookmarks.each do |bookmark| %>
               <p class="card-text">" <em><%= bookmark.comment %> "</em></p>
+              <%= link_to "Delete Bookmark", bookmark_path(@list, bookmark), method: :delete, data: { confirm: "Are you sure?" }%>
             <% end %>
           </div>
         </div>
@@ -27,8 +31,11 @@
   </div>
 
   <div class="row justify-content-center mb-4">
-    <div class="col-12 text-center">
-    <%= link_to "Back to Lists", lists_path, class: "btn btn-primary" %>
+    <div class="col-6 text-center">
+      <%= button_to "Delete list", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger text-white" %>
+    </div>
+    <div class="col-6 text-center">
+      <%= link_to "Back to Lists", lists_path, class: "btn btn-primary" %>
     </div>
   </div>
 
