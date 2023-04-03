@@ -52,7 +52,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .card-category-with-shadow {
@@ -67,4 +67,8 @@
 
 .card-category:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("<%= cl_image_path(list.photo.key) %>");
+}
+
+.card-text {
+  padding: 6px;
 }
