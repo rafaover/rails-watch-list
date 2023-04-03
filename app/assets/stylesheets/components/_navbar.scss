@@ -10,3 +10,8 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.flip-on-hover:hover {
+  transform: rotateY(180deg);
+  transition: transform 0.3s ease;
+}
