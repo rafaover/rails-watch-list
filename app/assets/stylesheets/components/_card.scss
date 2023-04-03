@@ -64,3 +64,7 @@
   text-decoration: none;
   color: inherit;
 }
+
+.card-category:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("<%= cl_image_path(list.photo.key) %>");
+}
