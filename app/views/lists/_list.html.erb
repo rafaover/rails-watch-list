@@ -1,6 +1,6 @@
 <%= link_to list_path(list) , class: "card-link" do %>
   <div class="card-body text-center">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(list.photo.key, :transformation=>["orange-colorize"]) %>')">
+    <div class="card-category card-category-with-shadow" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(list.photo.key, :transformation=>["orange-colorize"]) %>')">
     <%= list.name.upcase %>
     </div>
   </div>
