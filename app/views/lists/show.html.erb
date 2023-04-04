@@ -5,7 +5,8 @@
     </div>
     <div class="row mb-4 p-3">
       <div class="col-6 text-start">
-        <%= link_to "Add a Movie Bookmark", new_list_bookmark_path(@list), class: "btn btn-outline-success rounded-pill" %>
+        <%= link_to "Add a Movie Bookmark", new_list_bookmark_path(@list), remote: true, data: { bs_toggle: "modal", bs_target: "#newbookmarkmodal" }, class: "btn btn-outline-success rounded-pill" %>
+        <%= render "bookmarks/newbookmarkmodal", list: @list %>
       </div>
       <div class="col-6 text-end">
         <%= button_to "Delete list", list_path(@list), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: "btn btn-danger text-white rounded-pill" %>
