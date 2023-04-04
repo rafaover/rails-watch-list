@@ -3,10 +3,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 id="newlistmodalLabel">Add a New List</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for(list, html: { class: 'half-size-form' }) do |f| %>
+        <%= simple_form_for(list) do |f| %>
           <div class="form-inputs">
             <%= f.input :name %>
             <%= f.input :photo, as: :file %>
