@@ -52,8 +52,8 @@
       <div class="col-md-6">
         <h4>Add your review</h4>
         <%= simple_form_for([@list, @review]) do |f| %>
-          <%= f.input :rating, collection: [1, 2, 3, 4, 5], label: "Rating" %>
-          <%= f.input :text, label: "Comment", input_html: { class: "form-control" } %>
+          <%= f.input :rating, collection: 0..5, label: "Rating", as: :radio_buttons, item_wrapper_class: "form-check form-check-inline" %>
+          <%= f.input :text, label: "Write your review", input_html: { class: "form-control form-floating mb-3"} %>
           <%= f.button :submit, "Create review", class: "btn btn-primary rounded-pill" %>
         <% end %>
       </div>
