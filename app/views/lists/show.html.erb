@@ -5,10 +5,10 @@
     </div>
     <div class="row mb-4 p-3">
       <div class="col-6 text-start">
-        <%= link_to "Add a Movie Bookmark", new_list_bookmark_path(@list), class: "btn btn-outline-success" %>
+        <%= link_to "Add a Movie Bookmark", new_list_bookmark_path(@list), class: "btn btn-outline-success rounded-pill" %>
       </div>
       <div class="col-6 text-end">
-        <%= button_to "Delete list", list_path(@list), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: "btn btn-danger text-white" %>
+        <%= button_to "Delete list", list_path(@list), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: "btn btn-danger text-white rounded-pill" %>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
             <p class="card-text small"><%= movie.overview %></p>
             <% movie.bookmarks.each do |bookmark| %>
               <p class="card-text">" <em><%= bookmark.comment %> "</em></p>
-              <%= button_to "Delete Bookmark", bookmark_path(bookmark), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %>
+              <%= button_to "Delete", bookmark_path(bookmark), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: "rounded-pill px-3" %>
             <% end %>
           </div>
         </div>
@@ -53,7 +53,7 @@
         <%= simple_form_for([@list, @review]) do |f| %>
           <%= f.input :rating, collection: [1, 2, 3, 4, 5], label: "Rating" %>
           <%= f.input :text, label: "Comment", input_html: { class: "form-control" } %>
-          <%= f.button :submit, "Create review", class: "btn btn-primary" %>
+          <%= f.button :submit, "Create review", class: "btn btn-primary rounded-pill" %>
         <% end %>
       </div>
     </div>
