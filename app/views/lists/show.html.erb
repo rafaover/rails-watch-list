@@ -43,7 +43,7 @@
           <p>Rating:
           <% review.rating.times do %>
               <span style="display: inline-block;"><i class="fa-solid fa-star" style="color: #ffea00;"></i></span>
-          <% end %></P>
+          <% end %> <span class="text-muted"><%= review.created_at.strftime("%d %B, %Y") %></span></p>
           <em><strong>" <%= review.text %> "</strong></em>
           <hr>
         <% end %>
