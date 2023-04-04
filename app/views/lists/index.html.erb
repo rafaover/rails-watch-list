@@ -2,8 +2,8 @@
   <div class="container">
     <h1 class="text-center">Keeping your movies memory alive</h1>
     <div class="col-12 text-center py-4">
-      <%= link_to "Add a movie list", new_list_path(@list), remote: true, data: { toggle: "modal", target: "#newlistmodal" }, class: "btn button-50"%>
-      <%= render partial: "newlistmodal", locals: { list: @list } %>
+      <%= link_to "Add a movie list", new_list_path, remote: true, data: { bs_toggle: "modal", bs_target: "#newlistmodal" }, class: "btn button-50" %>
+      <%= render "newlistmodal", list: @list %>
     </div>
   </div>
 </div>
