@@ -5,11 +5,11 @@
         <h5 id="newlistmodalLabel">Add a New List</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body text-start">
         <%= simple_form_for(list) do |f| %>
           <div class="form-inputs">
-            <%= f.input :name %>
-            <%= f.input :photo, as: :file %>
+            <%= f.input :name, label: false, placeholder: "List Name" %>
+            <%= f.input :photo, as: :file, label: "Add a Photo" %>
           </div>
           <div class="form-actions">
             <%= f.button :submit, class: "btn btn-outline-success rounded-pill" %>
