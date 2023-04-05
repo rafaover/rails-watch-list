@@ -22,7 +22,7 @@
             <div class="movie-image mb-3" style="width:100%; height:200px; overflow:hidden;">
               <%= image_tag movie.poster_url, style: "width:100%;" %>
             </div>
-            <h5 class="card-title mx-auto"><%= movie.title %> / <%= movie.rating %><i class="fa-solid fa-star mx-1" style="color: #fff700;"></i></h5>
+            <h5 class="card-title mx-auto"><%= movie.title %> • <%= movie.rating %><i class="fa-solid fa-star mx-1" style="color: #fff700;"></i></h5>
             <p class="card-text small"><%= movie.overview %></p>
             <% movie.bookmarks.each do |bookmark| %>
               <p class="card-text">" <em><%= bookmark.comment %> "</em></p>
