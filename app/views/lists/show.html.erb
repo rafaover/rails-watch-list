@@ -5,7 +5,7 @@
     </div>
     <div class="row mb-4 p-3">
       <div class="col-6 text-start">
-        <%= link_to "Add a Movie Bookmark", "#", remote: true, data: { bs_toggle: "modal", bs_target: "#newbookmarkmodal" }, class: "btn btn-outline-success rounded-pill" %>
+        <%= link_to "Add a Movie Bookmark", "#", remote: true, data: { bs_toggle: "modal", bs_target: "#newbookmarkmodal" }, class: "btn button-50" %>
         <%= render "bookmarks/newbookmarkmodal", list: @list %>
       </div>
       <div class="col-6 text-end">
@@ -53,7 +53,7 @@
         <h4>Add your review</h4>
         <%= simple_form_for([@list, @review]) do |f| %>
           <%= f.input :rating, collection: 0..5, label: "Rating", as: :radio_buttons, item_wrapper_class: "form-check form-check-inline" %>
-          <%= f.input :text, label: false, input_html: { class: "form-control", placeholder: "Write your review"} %>
+          <%= f.input :text, label: false, required: false, input_html: { class: "form-control", placeholder: "Write your review"} %>
           <%= f.button :submit, "Create review", class: "btn btn-primary rounded-pill" %>
         <% end %>
       </div>
