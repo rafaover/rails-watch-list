@@ -17,7 +17,7 @@
   <div class="row justify-content-center">
     <% @list.movies.each do |movie| %>
       <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
+        <div class="card mb-4 shadow-sm" data-aos="zoom-in">
           <div class="card-body">
             <div class="movie-image mb-3" style="width:100%; height:200px; overflow:hidden;">
               <%= image_tag movie.poster_url, style: "width:100%;" %>

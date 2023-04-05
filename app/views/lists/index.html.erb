@@ -13,7 +13,7 @@
     <% @lists.in_groups_of(4, false).each do |list| %>
       <div class="row mb-3">
         <% list.each do |list| %>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="slide-up">
             <%= render list %>
           </div>
         <% end %>
