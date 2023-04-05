@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1458053688450-eef5d21d43b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80)">
   <div class="container">
-    <h1 class="text-center">Keeping <span id="typemov"> </h1>
+    <h1 class="text-center"><span id="typemov"> </h1>
     <div class="col-12 text-center py-4">
       <%= link_to "Add a movie list", "#", remote: true, data: { bs_toggle: "modal", bs_target: "#newlistmodal" }, class: "btn button-50" %>
       <%= render "newlistmodal", list: @list %>
@@ -10,8 +10,8 @@
 
 <script>
     var typed = new Typed('#typemov', {
-      strings: ['your', "movies memory alive forever"],
-      typeSpeed: 60,
+      strings: ["", "Keep your movie memories alive", "Add a list and record your favorite movies", "Create Bookmarks and make a notes about it"],
+      typeSpeed: 30,
     });
 </script>
 
