@@ -11,7 +11,7 @@ Project developed as a challenge during Le Wagon bootcamp.
 ## Stack+Libs+API
 
 - Ruby on Rails
-- Boostrap
+- Bootstrap
 - AOS
 - Typed.js
 - PostgreSQL
